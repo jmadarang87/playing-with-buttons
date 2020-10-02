@@ -48,11 +48,9 @@ function setButtons() {
     upButton(lis[i]);
     downButton(lis[i]);
     removeButton(lis[i]);
-  }
-   lis[0].removeChild(lis[0].firstElementChild)
-   lastElement = listUl.lastElementChild;
-   lastElement.removeChild(lastElement.lastElementChild);
-}
+  } listUl.lastElementChild.removeChild( listUl.lastElementChild.children[1] );
+    lis[0].removeChild(lis[0].firstElementChild);
+} 
 
 // Clears background color for all line items and resets first and last elements background colors appropriately.
 function resetBackgroundColor() {
